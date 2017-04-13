@@ -68,7 +68,7 @@ public class ListSortAdapter extends RecyclerView.Adapter {
         }
     }
 
-    interface OnItemClickListener {
+    public interface OnItemClickListener {
         void onItemClick(View view, int position);
     }
 

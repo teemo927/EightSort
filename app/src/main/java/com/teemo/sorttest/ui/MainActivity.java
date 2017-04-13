@@ -37,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
         mData.add("fastSort");
         mData.add("take_video");
         mData.add("guo_qi");
+        mData.add("personal");
         mRv.getAdapter().notifyDataSetChanged();
     }
 
@@ -63,6 +64,9 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case 3:
                         startActivity(new Intent(mContext, VideoPlayActivity.class));
+                        break;
+                    case 4:
+                        startActivity(new Intent(mContext, PersonalActivity.class));
                         break;
                 }
             }
