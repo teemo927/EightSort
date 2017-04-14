@@ -17,6 +17,8 @@ import com.teemo.sorttest.R;
 public class PersonalItemLayout extends RelativeLayout {
 
     private int xmlRes = R.layout.layout_item;
+    private TextView tvName;
+    private TextView tvMsg;
 
     public PersonalItemLayout(Context context) {
         this(context, null);
@@ -32,18 +34,35 @@ public class PersonalItemLayout extends RelativeLayout {
     }
 
     private void init(Context context, AttributeSet attrs) {
-        TypedArray t = context.obtainStyledAttributes(attrs,R.styleable.PersonalItemLayout,0,0);
+        TypedArray t = context.obtainStyledAttributes(attrs, R.styleable.PersonalItemLayout, 0, 0);
         String name = t.getString(R.styleable.PersonalItemLayout_item_name);
         String msg = t.getString(R.styleable.PersonalItemLayout_item_msg);
         t.recycle();
 
         LayoutInflater inflater = LayoutInflater.from(context);
         View view = inflater.inflate(xmlRes, this, false);
-        TextView tvName = (TextView) view.findViewById(R.id.tv_name);
-        tvName.setText(name);
-        TextView tvMsg = (TextView) view.findViewById(R.id.tv_msg);
-        tvMsg.setText(msg);
+
+        tvName = (TextView) view.findViewById(R.id.tv_name);
+        setName(name);
+        tvMsg = (TextView) view.findViewById(R.id.tv_msg);
+        setMsg(msg);
         addView(view);
+    }
+
+    public void setMsg(String msg) {
+        tvMsg.setText(msg);
+    }
+
+    public void setName(String name) {
+        tvName.setText(name);
+    }
+
+    private String getMsg() {
+        return tvMsg.getText().toString();
+    }
+
+    private String getName() {
+        return tvName.getText().toString();
     }
 
 }

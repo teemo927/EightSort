@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="5dp"
+    tools:context="com.teemo.sorttest.ui.PersonalActivity">
+
+    <com.teemo.sorttest.widget.PersonalItemLayout
+        android:id="@+id/l_photo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        app:item_msg="选择"
+        app:item_name="图像" />
+
+    <com.teemo.sorttest.widget.PersonalItemLayout
+        android:id="@+id/l_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        app:item_msg="其他的"
+        app:item_name="姓名" />
+
+</LinearLayout>
+

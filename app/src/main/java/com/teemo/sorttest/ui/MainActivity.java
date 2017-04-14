@@ -36,8 +36,8 @@ public class MainActivity extends AppCompatActivity {
         mData.add("bubbleSort");
         mData.add("fastSort");
         mData.add("take_video");
-        mData.add("guo_qi");
-        mData.add("personal");
+        mData.add("自定义View");
+        mData.add("切换Fragment的正确姿势");
         mRv.getAdapter().notifyDataSetChanged();
     }
 
